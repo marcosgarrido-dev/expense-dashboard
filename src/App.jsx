@@ -2,9 +2,10 @@ import { useState } from "react"
 import { expenses } from "./data/expenses"
 import DashboardCard from "./components/DashboardCard"
 import ExpenseTable from "./components/ExpenseTable"
+import { useLocalStorage } from "./hooks/useLocalStorage"
 
 function App() {
-  const [expenseList, setExpenseList] = useState(expenses)
+  const [expenseList, setExpenseList] = useLocalStorage("expenses", expenses)
   const [statusFilter, setStatusFilter] = useState("All")
 
   const totalExpenses = expenseList.reduce(
