@@ -23,6 +23,21 @@ function App() {
     (expense) => expense.status === "Rejected"
   ).length
 
+
+  const updateExpenseStatus = (id, newStatus) => {
+    const updatedExpenses = expenseList.map((expense) => {
+      if (expense.id === id) {
+        return {
+          ...expense,
+          status: newStatus
+        }
+      }
+
+      return expense
+    })
+
+    setExpenseList(updatedExpenses)
+  }
   // console.log(expenseList)
 
   return (
@@ -53,7 +68,10 @@ function App() {
           type="rejected"
         />
       </div>
-      <ExpenseTable expenses={expenseList} />
+      <ExpenseTable 
+        expenses={expenseList}
+        onUpdateStatus={updateExpenseStatus} 
+      />
     </div>
   )
 }

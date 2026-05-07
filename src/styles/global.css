@@ -96,6 +96,7 @@ body {
 .table-container h2 {
   font-size: 20px;
   margin-bottom: 20px;
+  color: #000000;
 }
 
 .expense-table {
@@ -138,4 +139,35 @@ body {
 .status-badge.rejected {
   background-color: #fee2e2;
   color: #991b1b;
+}
+
+/* Table action buttons */
+.table-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.table-actions button {
+  border: none;
+  border-radius: 8px;
+  padding: 7px 10px;
+  font-size: 13px;
+}
+
+.approve-btn {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.approve-btn:hover {
+  background-color: #a7f3d0;
+}
+
+.reject-btn {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.reject-btn:hover {
+  background-color: #fecaca;
 }
