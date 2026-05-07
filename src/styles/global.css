@@ -171,3 +171,38 @@ body {
 .reject-btn:hover {
   background-color: #fecaca;
 }
+
+/* ============================= */
+/* FILTER BUTTONS */
+/* ============================= */
+
+.filters {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filters button {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: white;
+  color: #374151;
+  font-size: 14px;
+}
+
+.filters button:hover {
+  background-color: #f3f4f6;
+}
+
+.filters .active-filter {
+  background-color: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.filters .active-filter:hover {
+  background-color: #365aa8;
+  color: white;
+  border-color: #2563eb;
+}
