@@ -1,0 +1,29 @@
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base app style */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Main app container */
+.app {
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* Dashboard title */
+.app h1 {
+  font-size: 32px;
+  margin-bottom: 32px;
+  color: #000000;
+}
