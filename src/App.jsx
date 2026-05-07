@@ -3,6 +3,7 @@ import { expenses } from "./data/expenses"
 import DashboardCard from "./components/DashboardCard"
 import ExpenseTable from "./components/ExpenseTable"
 import { useLocalStorage } from "./hooks/useLocalStorage"
+import AddExpenseForm from "./components/AddExpenseForm"
 
 function App() {
   const [expenseList, setExpenseList] = useLocalStorage("expenses", expenses)
@@ -41,6 +42,10 @@ function App() {
     setExpenseList(updatedExpenses)
   }
 
+  const addExpense = (newExpense) => {
+    setExpenseList([newExpense, ...expenseList])
+  }
+
   const filteredExpenses = statusFilter === "All" ? expenseList : expenseList.filter((expense) => expense.status === statusFilter)
   
   return (
@@ -71,6 +76,7 @@ function App() {
           type="rejected"
         />
       </div>
+      <AddExpenseForm onAddExpense={addExpense} />
       <div className="filters">
         {["All", "Pending", "Approved", "Rejected"].map((status) => (
           <button
