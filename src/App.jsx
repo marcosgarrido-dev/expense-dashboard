@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { expenses } from "./data/expenses"
 import DashboardCard from "./components/DashboardCard"
+import ExpenseTable from "./components/ExpenseTable"
 
 function App() {
   const [expenseList, setExpenseList] = useState(expenses)
@@ -52,6 +53,7 @@ function App() {
           type="rejected"
         />
       </div>
+      <ExpenseTable expenses={expenseList} />
     </div>
   )
 }
