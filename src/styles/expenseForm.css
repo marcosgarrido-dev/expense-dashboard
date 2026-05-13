@@ -1,0 +1,33 @@
+.expense-form {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.expense-form input {
+  flex: 1;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+  background-color: white;
+  color: #111827;
+}
+
+.expense-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.expense-form button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background-color: #2563eb;
+  color: white;
+  font-size: 14px;
+}
+
+.expense-form button:hover {
+  background-color: #1d4ed8;
+}
