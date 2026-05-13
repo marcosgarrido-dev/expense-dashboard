@@ -114,18 +114,24 @@ function App() {
           title="Pending"
           value={`${pendingCount} requests · €${pendingTotal}`}
           type="pending"
+          onClick={() => setStatusFilter("Pending")}
+          isActive={statusFilter === "Pending"}
         />
 
         <DashboardCard
           title="Approved"
           value={`${approvedCount} requests · €${approvedTotal}`}
           type="approved"
+          onClick={() => setStatusFilter("Approved")}
+          isActive={statusFilter === "Approved"}
         />
 
         <DashboardCard
           title="Rejected"
           value={`${rejectedCount} requests · €${rejectedTotal}`}
           type="rejected"
+          onClick={() => setStatusFilter("Rejected")}
+          isActive={statusFilter === "Rejected"}
         />
 
       </div>

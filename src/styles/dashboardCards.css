@@ -13,6 +13,7 @@
   padding: 15px;
   border: 1px solid #d7dce3;
   box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+  cursor: default;
 }
 
 /* Card title */
@@ -46,4 +47,21 @@
 /* Rejected */
 .rejected {
   border-left: 6px solid #ef4444;
+}
+
+.dashboard-card.pending,
+.dashboard-card.approved,
+.dashboard-card.rejected {
+  cursor: pointer;
+}
+
+.dashboard-card.pending:hover,
+.dashboard-card.approved:hover,
+.dashboard-card.rejected:hover {
+  transform: translateY(-2px);
+}
+
+.active-card {
+  outline: 2px solid #2563eb;
+  outline-offset: 3px;
 }
